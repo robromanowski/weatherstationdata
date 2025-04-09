@@ -1,0 +1,219 @@
+/* --- General Body and Typography --- */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    /* Light background */
+    color: #333;
+    /* Default text color */
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: #2a475e;
+    /* Dark blue-grey heading color */
+}
+
+h1 {
+    margin-bottom: 5px;
+    /* Reduce space below main heading */
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #555;
+    /* Slightly lighter color for subtitle */
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+h3 {
+    /* For table title */
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+
+/* --- File Input Controls --- */
+.controls {
+    text-align: center;
+    margin-bottom: 30px;
+    /* Space below controls */
+    padding: 15px;
+    background-color: #e9ecef;
+    /* Light grey background */
+    border-radius: 5px;
+}
+
+.controls label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#status {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #6c757d;
+    /* Grey status text */
+    min-height: 1.2em;
+    /* Prevent layout shift when text changes */
+}
+
+
+/* --- Station Info (Elevation & Map) --- */
+#stationInfo {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1em;
+}
+
+#stationElevation {
+    display: block;
+    /* Puts elevation on its own line */
+    margin-bottom: 15px;
+    /* Space below elevation */
+}
+
+#mapContainer {
+    max-width: 500px;
+    /* Adjust width as desired */
+    height: 300px;
+    /* Adjust height as desired */
+    margin: 0 auto 15px auto;
+    /* Center map block, add bottom margin */
+    border: 1px solid #ccc;
+    /* Subtle border */
+    border-radius: 5px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Ensures iframe respects border radius */
+    background-color: #f8f9fa;
+    /* Light background while map loads */
+}
+
+#mapContainer iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    /* Remove iframe default border */
+}
+
+/* Style for placeholder text if map coordinates are missing */
+.map-placeholder {
+    text-align: center;
+    padding-top: 50px;
+    /* Adjust vertical position */
+    color: #888;
+    /* Grey text */
+    font-style: italic;
+}
+
+
+/* --- Chart Container --- */
+.chart-container {
+    max-width: 900px;
+    /* Max width of chart area */
+    margin: 20px auto;
+    /* Center the container */
+    padding: 20px;
+    background-color: #fff;
+    /* White background for chart area */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    height: 450px;
+    /* Set a fixed height */
+    position: relative;
+    /* Needed for Chart.js responsiveness */
+}
+
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    /* Prevents baseline spacing issues */
+    width: 100%;
+    height: 100%;
+}
+
+
+/* --- Summary Table --- */
+#summaryTableContainer {
+    max-width: 600px;
+    /* Max width of table area */
+    margin: 40px auto 20px auto;
+    /* Center below chart, add top/bottom margin */
+}
+
+#summaryTableContainer table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Clean borders */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    border-radius: 5px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Ensures border radius clips content */
+}
+
+#summaryTableContainer th,
+#summaryTableContainer td {
+    border: 1px solid #ddd;
+    /* Light grey borders */
+    padding: 10px 12px;
+    /* Cell padding */
+    text-align: center;
+    /* Center align text */
+}
+
+#summaryTableContainer th {
+    background-color: #e9ecef;
+    /* Header background */
+    font-weight: bold;
+    color: #495057;
+    /* Header text color */
+}
+
+#summaryTableContainer tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+    /* Zebra striping for body rows */
+}
+
+#summaryTableContainer tbody tr:hover {
+    background-color: #e2e6ea;
+    /* Hover effect for body rows */
+}
+
+/* Styles for the table footer summary rows */
+#summaryTableContainer tfoot tr {
+    background-color: #dee2e6;
+    /* Slightly darker background for footer */
+    font-weight: bold;
+    border-top: 2px solid #adb5bd;
+    /* Add a separator line above footer */
+}
+
+#summaryTableContainer tfoot td {
+    color: #212529;
+    /* Darker text color for footer */
+}
+
+
+/* --- Utility / Error Styles --- */
+.error-msg {
+    color: #dc3545;
+    /* Bootstrap danger red */
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
